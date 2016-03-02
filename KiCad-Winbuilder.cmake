@@ -347,10 +347,10 @@ if( EXISTS "${KICAD_PACKAGE_SOURCE_DIR}/pkg/mingw-w64-i686-kicad-git/mingw32" AN
           DESTINATION "${HOME_DIR}" )
 
     # Copy the runtime requirements (shared objects mainly)
-    execute_msys2_bash( "$HOME/copydlls.sh \
+		execute_msys2_bash( "${HOME_DIR}/copydlls.sh \
                          --arch=i686 \
-                         --pkgpath=$HOME/MINGW-packages/mingw-w64-kicad-git \
-                         --nsispath=$HOME/nsis \
+												 --pkgpath=${HOME_DIR}/MINGW-packages/mingw-w64-kicad-git \
+												 --nsispath=${HOME_DIR}/nsis \
                          --makensis=${NSIS_MAKE_COMMAND}"
                          "${LOG_DIR}/copydlls_mingw32" )
 endif()
@@ -361,10 +361,10 @@ if( EXISTS "${KICAD_PACKAGE_SOURCE_DIR}/pkg/mingw-w64-x86_64-kicad-git/mingw64" 
           DESTINATION "${HOME_DIR}" )
 
     # Copy the runtime requirements (shared objects mainly)
-    execute_msys2_bash( "~/copydlls.sh \
+		execute_msys2_bash( "${HOME_DIR}/copydlls.sh \
                          --arch=x86_64 \
-                         --pkgpath=\$HOME/MINGW-packages/mingw-w64-kicad-git \
-                         --nsispath=$HOME/nsis \
+												 --pkgpath=\${HOME_DIR}/MINGW-packages/mingw-w64-kicad-git \
+												 --nsispath=${HOME_DIR}/nsis \
                          --makensis=${NSIS_MAKE_COMMAND}"
                          "${LOG_DIR}/copydlls_mingw64" )
 endif()
