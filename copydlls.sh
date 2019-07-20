@@ -13,7 +13,8 @@ display_help() {
     echo "  -d, --dirpath=PATH   Path to make install location (DESTDIR)"
     echo "  -m, --makensis=PATH  Path to makensis.exe"
     echo "  -s, --nsispath=PATH  Path to the NSIS packaging scripts"
-    echo "  -v, --version=VERSTR Version string" 
+    echo "  -o, --outdir=PATH    Path to output directory"
+    echo "  -v, --version=VERSTR Version string"
     exit 1
 }
 
@@ -214,10 +215,15 @@ copystuff() {
     #echo Copying kicad binaries and stuff...
     #cp -r $MSYSDIR/bin/* $TARGETDIR/bin
 
-    echo Copying dll depends...
+    echo Copying dll dependencies...
     for i in ${SEARCHLIST[@]}; do
-        echo $i
-        find "$MSYSDIR/bin" -name $i | xargs cp -t "$TARGETDIR/bin"
+        FILE_LIST=$(find "$MSYSDIR/bin" -name "$i")
+        if [ -z "$FILE_LIST" ]; then
+            echo "Did not find any files matching $i"
+        else
+            echo "Copying $i"
+            echo "$FILE_LIST" | xargs cp -t "$TARGETDIR/bin"
+        fi
     done
 
     echo Copying include/python2.7...
@@ -233,7 +239,7 @@ copystuff() {
     find "${TARGETDIR}/lib/python2.7/" -name "*.pyo" -type f -delete
 
     echo Copying ssl/certs/ca-bundle.crt...
-    cp "$MSYSDIR/ssl/certs/ca-bundle.crt" "$TARGETDIR/ssl/certs"
+    cp "$MSYSDIR/ssl/certs/ca-bundle.crt" "$TARGETDIR/ssl/certs/"
 
     echo Copying python...
     cp $MSYSDIR/bin/python.exe $TARGETDIR/bin
@@ -275,7 +281,6 @@ makensis() {
     pwd
     echo "This is still a work in progress... but GPL..." > ../COPYRIGHT.txt
     "$MAKENSIS" \
-        //DOPTION_STRING="native-mingw-with-scripting-$ARCH" \
         //DPRODUCT_VERSION=$VERSION \
         //DOUTFILE="..\kicad-$VERSION-$ARCH.exe" \
         //DARCH="$ARCH" \
