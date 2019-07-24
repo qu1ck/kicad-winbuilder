@@ -1,4 +1,4 @@
-;Additional text definitions for English
+;Additional text definitions for SimpChinese
 
 ;File name of license file
 LicenseLangString MUILicense ${LANG_SIMPCHINESE} "..\COPYRIGHT.txt"
@@ -26,10 +26,10 @@ LangString LANGUAGE_NAME_ZH ${LANG_SIMPCHINESE} "中文"
 
 ;Component option
 LangString TITLE_SEC_MAIN ${LANG_SIMPCHINESE} "主要应用"
-LangString TITLE_SEC_LIBRARIES ${LANG_SIMPCHINESE} "Libraries"
+LangString TITLE_SEC_LIBRARIES ${LANG_SIMPCHINESE} "库"
 LangString TITLE_SEC_SCHLIB ${LANG_SIMPCHINESE} "原理图库"
 LangString TITLE_SEC_FPLIB ${LANG_SIMPCHINESE} "封装库"
-LangString TITLE_SEC_PACKAGES3D ${LANG_SIMPCHINESE} "Footprint 3d models"
+LangString TITLE_SEC_PACKAGES3D ${LANG_SIMPCHINESE} "封装 3D 模型"
 LangString TITLE_SEC_FPWIZ ${LANG_SIMPCHINESE} "封装向导"
 LangString TITLE_SEC_DEMOS ${LANG_SIMPCHINESE} "示范工程"
 LangString TITLE_SEC_DOCS ${LANG_SIMPCHINESE} "帮助文件"
@@ -40,8 +40,8 @@ LangString TITLE_SEC_FILE_ASSOC ${LANG_SIMPCHINESE} "文件关联"
 LangString DESC_SEC_MAIN ${LANG_SIMPCHINESE} "主要应用程序文件。"
 LangString DESC_SEC_SCHLIB ${LANG_SIMPCHINESE} "除非先前已安装，否则需要原理图库。"
 LangString DESC_SEC_FPLIB ${LANG_SIMPCHINESE} "除非先前已安装封装库，否则需要封装库。"
-LangString DESC_SEC_PACKAGES3D_DOWNLOAD ${LANG_SIMPCHINESE} "Footprint 3d models are recommended to install. They will be downloaded separately unless installer detects a previously downloaded archive."
-LangString DESC_SEC_PACKAGES3D ${LANG_SIMPCHINESE} "Footprint 3d models are recommended to install."
+LangString DESC_SEC_PACKAGES3D_DOWNLOAD ${LANG_SIMPCHINESE} "建议安装封装 3D 模型。除非安装程序检测到以前下载的压缩文件，否则它们将单独下载。"
+LangString DESC_SEC_PACKAGES3D ${LANG_SIMPCHINESE} "建议安装封装 3D 模型。"
 LangString DESC_SEC_FPWIZ ${LANG_SIMPCHINESE} "封装编辑器中提供了基于 Python 的默认封装向导。 这是 Windows 上的一个实验性功能。"
 LangString DESC_SEC_DEMOS ${LANG_SIMPCHINESE} "一些演示项目和教程。"
 LangString DESC_SEC_DOCS ${LANG_SIMPCHINESE} "帮助 PDF 格式的文件。"
@@ -61,19 +61,19 @@ LangString DESC_SEC_FILE_ASSOC ${LANG_SIMPCHINESE} "为 KiCad 相关文件创建
 LangString FILE_DESC_KICAD_PCB ${LANG_SIMPCHINESE} "KiCad PCB 板"
 LangString FILE_DESC_SCH ${LANG_SIMPCHINESE} "KiCad 原理图"
 LangString FILE_DESC_PRO ${LANG_SIMPCHINESE} "KiCad 工程"
-LangString FILE_DESC_KICAD_WKS ${LANG_SIMPCHINESE} "KiCad 页面布局"
+LangString FILE_DESC_KICAD_WKS ${LANG_SIMPCHINESE} "KiCad 图框"
 
 ;Application Friendly Names (for windows explorer hook)
 LangString APP_FRIENDLY_KICAD ${LANG_SIMPCHINESE} "KiCad"
 LangString APP_FRIENDLY_PCBNEW ${LANG_SIMPCHINESE} "KiCad - Pcbnew"
 LangString APP_FRIENDLY_EESCHEMA ${LANG_SIMPCHINESE} "KiCad - Eeschema"
-LangString APP_FRIENDLY_PLEDITOR ${LANG_SIMPCHINESE} "KiCad - 页面布局编辑器"
+LangString APP_FRIENDLY_PLEDITOR ${LANG_SIMPCHINESE} "KiCad - 图框编辑器"
 
 ;Application names
 LangString APP_NAME_KICAD ${LANG_SIMPCHINESE} "KiCad"
 LangString APP_NAME_PCBNEW ${LANG_SIMPCHINESE} "Pcbnew"
 LangString APP_NAME_EESCHEMA ${LANG_SIMPCHINESE} "Eeschema"
-LangString APP_NAME_PLEDITOR ${LANG_SIMPCHINESE} "页面布局编辑器"
+LangString APP_NAME_PLEDITOR ${LANG_SIMPCHINESE} "图框编辑器"
 LangString APP_NAME_PCBCALCULATOR ${LANG_SIMPCHINESE} "PCB 计算器"
 LangString APP_NAME_BITMAP2COMPONENT ${LANG_SIMPCHINESE} "BMP 到元件"
 LangString APP_NAME_GERBVIEW ${LANG_SIMPCHINESE} "Gerbview"
@@ -84,7 +84,7 @@ LangString PROGRAM_IS_OPEN_ERROR ${LANG_SIMPCHINESE} "$R1 目前正在运行！�
 LangString FREECAD_PROMPT ${LANG_SIMPCHINESE} "要编辑或创建 3D 对象模型，您需要安装 FreeCAD。 \
 FreeCAD 和用户手册可以从 FreeCAD 网页免费下载。选中此框以打开 FreeCAD 网页。"
 
-LangString CLEANUP_PROMPT ${LANG_SIMPCHINESE} "Remove downloaded files?"
+LangString CLEANUP_PROMPT ${LANG_SIMPCHINESE} "是否删除下载的文件？"
 LangString UNINST_PROMPT ${LANG_SIMPCHINESE} "您确定要完全删除 $(^Name) 及其所有元件吗？ $\n\
 这还将删除程序目录中的所有已修改和新文件，库和模块 \
 （包括用户安装的 Python 模块）！"
